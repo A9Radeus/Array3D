@@ -3,7 +3,7 @@
 ![GitHub](https://img.shields.io/github/license/A9Radeus/Array3D)
 ![GitHub](https://img.shields.io/badge/language-C%2B%2B17-blue)
 
-Array3D is std::array-like data structure used to represent data existing in 3D (for example: vertices/indices for complex Bezier Patches).
+Array3D is std::array-like data structure used to represent data in 3 dimensions (for example: vertices/indices for complex Bezier Patches).
 
 Internally, Array3D uses a single std::array, which means that:
 * it is cache-friendly (contiguous memory)
@@ -60,7 +60,7 @@ if constexpr (rch::Array3D<int, 2,4,3>::in_bounds_signed(1, 2, 1) == true) {
 }
 
 if constexpr (rch::Array3D<int, 2,4,3>::in_bounds_signed(123, 123, 123) == true) {
-    std::cout << "This won't even get compiled!\n"; 
+    std::cout << "This entire statement will be discarded at compile-time!\n"; 
 }
 ```
 
