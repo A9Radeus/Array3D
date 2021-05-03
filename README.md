@@ -3,6 +3,13 @@
 ![GitHub](https://img.shields.io/github/license/A9Radeus/Array3D)
 ![GitHub](https://img.shields.io/badge/language-C%2B%2B17-blue)
 
+Array3D is std::array-like data structure used to represent data existing in 3D (for example: vertices/indices for complex Bezier Patches).
+
+Internally, Array3D uses a single std::array, which means that:
+* it is cache-friendly (contiguous memory)
+* there is **no** dynamic allocation involved 
+* there is **no** multiple dereferencing (like with c-style array[a][b][c]).
+
 ## Integration
 
 Simply add "Array3D.h" file to your project and include it:
