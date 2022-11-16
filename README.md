@@ -66,13 +66,13 @@ if constexpr (rch::Array3D<int, 2,4,3>::in_bounds_signed(123, 123, 123) == true)
 
 ## Tips
 
-* When often dealing the same Array3D type, like inside of another class, you can use "using":
+* When often dealing with the same Array3D type you can create a type alias with "using":
 
 ```cpp
 
 class A {
 public:
-    using AData = rch::Array3D<float, 34, 23, 5>;
+    using AData = rch::Array3D<float, 34, 23, 5>; // <-- a comfortable type alias
 
     const AData& get_data() const { return m_data; }
     void merge_data(const AData& other_data) { /*...*/ }
